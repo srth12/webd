@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="stylesheet" type="text/css" href="style.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Book360Deg.com</title>
 <?php
@@ -53,18 +54,17 @@ header("Location:search.php?id=".$search);
 <body>
 <!DOCTYPE html>
 <html>
-<body style="margin-top:-41px;">
-
-<div id="container" style="width:100%;height:550px;"><br />
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bbottom:0;">Book360deg: Book  Views and reviews</h1></div>
-<div id="Seach box" style="float:right">
-<form action="index.php" method="POST" >
+<body style="margin-top:0px; margin-left:0px">
+<img src="./images/titlebar.jpg" width="100%" height="90px"/><br />
+<div id="container" style="width:100%;"><br />
+</div>
+<div id="Seachbox">
+<form action="index.php" method="POST" align="right" >
 Search: <input type="text" name="Searchbox">
 <input type="submit" value="Go" name="search" /> 
 </form>
 </div>
-<div id="menu" style="background-color:#FFD700;height:100%;width:10%;float:left;">
+<div id="menu" style="background-color:#FFD700;height:450px;width:10%;float:left;">
 <b>Genre</b><br>
 Adventure<br>
 Comics<br>
@@ -76,9 +76,9 @@ History<br>
 Autobiography<br/>
 Epic
 </div>
-<div id="content" style="background-color:#EEEEEE;height:100%;width:70%;float:left;">
+<div id="content" style="background-color:#EEEEEE;width:70%;float:left;">
 Content goes here</div>
-<div id="login field" style="float:left">
+<div id="login field">
 <form align="right" action="index.php" method="POST">
 User ID  : 
 <input type="text" name="username"><br/>
