@@ -26,7 +26,7 @@ $password=check_input($_REQUEST["password"]);
 }
 if(isset($_REQUEST["go"])){
 $search=$_REQUEST["Searchbox"];
-$query="select from 
+$query="select * from book_details where title like '%story' ".
 
 }
 
