@@ -54,16 +54,17 @@ header("Location:search.php?id=".$search);
 <body>
 <!DOCTYPE html>
 <html>
-<body style="margin-top:0px; margin-left:0px">
+<body>
 <img src="./images/titlebar.jpg" width="100%" height="90px"/><br />
-<div id="container" style="width:100%;"><br />
+<div id="container"><br />
 </div>
-<div id="Seachbox">
+<div id="Searchbox">
 <form action="index.php" method="POST" align="right" >
-Search: <input type="text" name="Searchbox">
-<input type="submit" value="Go" name="search" /> 
+<font color="#FFFFFF">Search</font><input type="text" name="Searchbox">
+<input type="submit" value="Go" name="search"/> 
 </form>
 </div>
+<div id="bottom">
 <div id="menu" style="background-color:#FFD700;height:450px;width:10%;float:left;">
 <b>Genre</b><br>
 Adventure<br>
@@ -88,6 +89,6 @@ Password
 </form>
 </div>
 </div>
-
+</div>
 </body>
 </html>
