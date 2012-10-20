@@ -1,4 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Book360Deg.com</title>
 <?php
+function connectdb(){
+
+mysqli_connect("localhost","","") or die("could not connect to db stopping...");
+mysql_select_db("books") or die(" database selection failed");
+
+}
 
 function check_input($value)
 {
@@ -24,20 +35,15 @@ $password=check_input($_REQUEST["password"]);
 
 
 }
-if(isset($_REQUEST["go"])){
+if(isset($_REQUEST["search"])){
+
 $search=$_REQUEST["Searchbox"];
-$query="select * from book_details where title like '%story' ".
+header("Location:search.php?id=".$search);
 
 }
 
 
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Book360Deg.com</title>
 
 
 
@@ -55,7 +61,7 @@ $query="select * from book_details where title like '%story' ".
 <div id="Seach box" style="float:right">
 <form action="index.php" method="POST" >
 Search: <input type="text" name="Searchbox">
-<input type="submit" value="Go" /> 
+<input type="submit" value="Go" name="search" /> 
 </form>
 </div>
 <div id="menu" style="background-color:#FFD700;height:100%;width:10%;float:left;">
