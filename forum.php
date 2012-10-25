@@ -8,20 +8,21 @@ mysql_select_db("books") or die(" database selection failed");
 
 }
 connectdb();
-$query="select username,comments from book_forum where title=".$title;
+$query="select username,comments from book_forum where btitle like '%".$title."%'";
 $res=mysql_query($query) or die("Comments not found");
-if( $res and ! $mysql_num_rows){
-return "No posts";
+if(! mysql_num_rows( $res )){  //and ! $mysql_num_rows($res)
+echo "No posts";
 }
 else{
+
 $text="";
 while($row=mysql_fetch_assoc($res)){
-$text=$text. "<br/> ".$row["username"]."<br/>".$row["comments"]."<br/>";
+$text=$text. "<br/> ".$row['username']."<br/>".$row['comments']."<br/>";
 
 
 }
 
-return $text;
+echo $text;
 }
 
 

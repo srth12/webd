@@ -59,8 +59,8 @@ header("Location:search.php?id=".$search);
 <div id="container"><br />
 </div>
 <div id="Searchbox">
-<form action="index.php" method="POST" align="right" >
-<font color="#FFFFFF">Search</font><input type="text" name="Searchbox">
+<form action="index.php" method="POST" align="right">
+<font>Search</font><input id="oval" type="text" name="Searchbox">
 <input type="submit" value="Go" name="search"/> 
 </form>
 </div>
@@ -77,15 +77,15 @@ History<br>
 Autobiography<br/>
 Epic
 </div>
-<div id="content" style="background-color:#EEEEEE;width:70%;float:left;">
+<div id="content">
 Content goes here</div>
-<div id="login field">
+<div id="loginfield">
 <form align="right" action="index.php" method="POST">
 User ID  : 
 <input type="text" name="username"><br/>
 Password 
 <input type="password" name="password"><br />
-<input type="submit" value="login" name="login" >
+<input id= "loginbutton" type="submit" value="login" name="login" >
 </form>
 </div>
 </div>

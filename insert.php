@@ -43,12 +43,22 @@ die( "image uplaoding failed");
 <title>Book 360deg</title>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
 <img id="titlebar" src="./images/titlebar.jpg" width="100%" height="100px" />
 <form action="insert.php" method="post" enctype="multipart/form-data"  >
 <table>
 <tr>
 <td>Title</td>
-<td><input type="text" name="title" /></td>
+<td><input type="text" name="title"  /></td>
 </tr>
 <tr>
 <td>Autor</td>
@@ -76,5 +86,34 @@ die( "image uplaoding failed");
 
 
 </form>
+<p id="response"    >
+</p>
+
+
+<script>
+
+
+
+function fn(){
+	//document.write(v);
+	  //document.write("hai");
+	   if(window.XMLHttpRequest){
+	 xmlhttp= new XMLHttpRequest();
+	 }
+	 else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.open("GET","forum.php?id=batman",false);
+	xmlhttp.send();
+	var dom=xmlhttp.responseText;
+	//document.write(dom);
+	
+	document.getElementById('response').innerHTML=dom;
+}
+
+
+fn();
+</script>
 </body>
 </html>
