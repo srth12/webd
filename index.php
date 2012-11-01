@@ -36,16 +36,45 @@ $password=check_input($_REQUEST["password"]);
 
 
 }
-if(isset($_REQUEST["search"])){
 
-$search=$_REQUEST["Searchbox"];
-header("Location:search.php?id=".$search);
-
-}
 
 
 ?>
+<script>
 
+
+
+function fn(search){
+	
+	   if(window.XMLHttpRequest){
+	 xmlhttp= new XMLHttpRequest();
+	 }
+	 else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.open("GET","search.php?id="+search,false);
+	xmlhttp.send();
+	var dom=xmlhttp.responseText;
+	document.getElementById('content').innerHTML=dom;
+}
+function def(){
+	if(window.XMLHttpRequest){
+	 xmlhttp= new XMLHttpRequest();
+	 }
+	 else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.open("GET","search.php?id="+search,false);
+	xmlhttp.send();
+	var dom=xmlhttp.responseText;
+	document.getElementById('content').innerHTML=dom;
+	
+	}
+
+
+</script>
 
 
 
@@ -58,11 +87,10 @@ header("Location:search.php?id=".$search);
 <img src="./images/titlebar.jpg" width="100%" height="90px"/><br />
 <div id="container"><br />
 </div>
-<div id="Searchbox">
-<form action="index.php" method="POST" align="right">
-<font>Search</font><input id="oval" type="text" name="Searchbox">
-<input type="submit" value="Go" name="search"/> 
-</form>
+<div id="Searchbox" align="right">
+
+<input id="oval" type="text" value="search" name="Searchbox" onKeyPress="fn(this.value)" >
+
 </div>
 <div id="bottom">
 <div id="menu" style="background-color:#FFD700;height:450px;width:10%;float:left;">
@@ -78,7 +106,10 @@ Autobiography<br/>
 Epic
 </div>
 <div id="content">
-Content goes here</div>
+Content goes here
+
+
+</div>
 <div id="loginfield">
 <form align="right" action="index.php" method="POST">
 User ID  : 
