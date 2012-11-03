@@ -20,8 +20,7 @@ mysqli_connect("localhost","","") or die("could not connect to db stopping...");
 mysql_select_db("books") or die(" database selection failed");
 
 }
-$search=$_GET["id"];
-$search=$search;
+
 connectdb();
 $genre[0]="Adventure";
 $genre[1]="Comics";
@@ -33,24 +32,15 @@ $genre[6]="History";
 $genre[7]="Autobiography";
 $genre[8]="Epic";
 for($i=0;$i<9;$i++){
-$query="select * from book_details where genre=".$genre[i];;
+$query="select image_url from book_details where genre=".$genre[i]."limit 0,1";
 $res=mysql_query($query) or die("Querying failed... ");
-}
 if($res and !mysql_num_rows($res)){
-die("Book Database is empty, Think like someone hacked our system :p");
-}
-else{
-	
-	
-	}
-
-echo "<div id='3'> ";
-
 while( $row=mysql_fetch_assoc($res)){
-echo ("<br/><img style='clear:both;z-index:-5; ' src='./images/".$row["image_url"]."' /> <br/>".$row["title"]."<br/>".$row["author"]."<br/>".$row["publisher"]."<br/><br/><br/>");
+echo ("<br/><img style='clear:both;z-index:-5; ' src='./images/".$row['image_url']."' /> <br/>".$row["title"]."<br/>");
 
 }
-echo "</div>";
+}}
+
 
 
 ?>

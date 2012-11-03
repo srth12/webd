@@ -66,11 +66,26 @@ function def(){
 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	
-	xmlhttp.open("GET","search.php?id="+search,false);
+	xmlhttp.open("GET","default.php",false);
 	xmlhttp.send();
 	var dom=xmlhttp.responseText;
-	document.getElementById('content').innerHTML=dom;
+	document.getElementById('content').innerHTML="<div id=\'imggrp\'>"+dom+"</div>";
 	
+	}
+
+function fn3(arg) {
+	//document.write("kljslfjlksjdfklsjfl");
+	if(window.XMLHttpRequest){
+	 xmlhttp= new XMLHttpRequest();
+	 }
+	 else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.open("GET","genre.php?id="+arg,false);
+	xmlhttp.send();
+	var dom=xmlhttp.responseText;
+	document.getElementById('content').innerHTML="<div id=\'imggrp\'>"+dom+"</div>";
 	}
 
 
@@ -95,15 +110,15 @@ function def(){
 <div id="bottom">
 <div id="menu">
 <b>Genre</b><br><br>
-Adventure<br><br>
-Comics<br><br>
-Science&Technology <br><br>
-Sci-Fi<br><br>
-Novel<br><br>
-Short Story<br><br>
-History<br><br>
-Autobiography<br/><br>
-Epic
+<a onmouseover="fn3('Adventure')" >Adventure</a><br><br>
+<a onmouseover="fn3('Comics')" >Comics</a><br><br>
+<a onmouseover="fn3('Science')" >Science&Technology</a> <br><br>
+<a onmouseover="fn3('Sci-Fi')" >Sci-Fi</a><br><br>
+<a onmouseover="fn3('Novel')" >Novel</a><br><br>
+<a onmouseover="fn3('Short Story')" >Short Story</a><br><br>
+<a onmouseover="fn3('History')" >History</a><br><br>
+<a onmouseover="fn3('Autobiography')" >Autobiography</a><br/><br>
+<a onmouseover="fn3('Epic')" >Epic</a>
 </div>
 <div id="content">
 Content goes here

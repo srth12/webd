@@ -1,3 +1,9 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
 <?php
 function check_input($value)
 {
@@ -29,11 +35,14 @@ if($res and !mysql_num_rows($res)){
 die("Content not found");
 
 }
+
 echo ("<br>");
 while( $row=mysql_fetch_assoc($res)){
 
-echo ("<img style='clear:both;z-index:-5; width='200px' height='150px' src='./images/".$row["image_url"]."' /> <br/>".$row["title"]."<br/>".$row["author"]."<br/>".$row["publisher"]."<br><br>");
+echo ("<a href=''> <img style='clear:both;z-index:-5;' width='100px' height='150px' src='./images/".$row["image_url"]."' /> </a> "."<br>". $row["title"]."<br>". $row["author"]."<br>"."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 }
 
 
 ?>
+</body>
+</html>
