@@ -89,20 +89,20 @@ function def(){
 </div>
 <div id="Searchbox" align="right">
 
-<input id="oval" type="text" value="search" name="Searchbox" onKeyPress="fn(this.value)" >
+<input id="oval" type="text" value="search" name="Searchbox" onkeypress="fn(this.value)" >
 
 </div>
 <div id="bottom">
-<div id="menu" style="background-color:#FFD700;height:450px;width:10%;float:left;">
-<b>Genre</b><br>
-Adventure<br>
-Comics<br>
-Science&Technology <br>
-Sci-Fi<br>
-Novel<br>
-Short Story<br>
-History<br>
-Autobiography<br/>
+<div id="menu">
+<b>Genre</b><br><br>
+Adventure<br><br>
+Comics<br><br>
+Science&Technology <br><br>
+Sci-Fi<br><br>
+Novel<br><br>
+Short Story<br><br>
+History<br><br>
+Autobiography<br/><br>
 Epic
 </div>
 <div id="content">

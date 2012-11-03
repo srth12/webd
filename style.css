@@ -23,7 +23,7 @@ color:#CC6;
 #content
 {background-color:#EEEEEE;width:70%;float:left;margin-top:1px;margin-left:2px;}
 #menu
-{background-color:#FFD700;height:450px;width:10%;float:left;margin-top:1px;margin-left:2px;}
+{background-color:#C96;height:450px;width:10%;float:left;margin-top:1px;margin-left:2px;}
 #oval
 {border:2px #FFFFFF;
 padding:10px 40px; 
@@ -49,4 +49,9 @@ border-radius:5px;
 background-color:#C00;
 color:#FFF;
 
+}
+#textar
+{
+	overflow: auto; 
+	max-height: 350px; 
 }
