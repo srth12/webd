@@ -24,22 +24,27 @@ mysql_select_db("books") or die(" database selection failed");
 connectdb();
 $genre[0]="Adventure";
 $genre[1]="Comics";
-$genre[2]="Science&Technology";
+$genre[2]="Science";
 $genre[3]="Sci-Fi";
 $genre[4]="Novel";
 $genre[5]="Short Story";
 $genre[6]="History";
 $genre[7]="Autobiography";
 $genre[8]="Epic";
+
 for($i=0;$i<9;$i++){
-$query="select image_url from book_details where genre=".$genre[i]."limit 0,1";
+$query="select image_url from book_details where genre like '%".$genre[$i]."%' limit 0,1";
 $res=mysql_query($query) or die("Querying failed... ");
 if($res and !mysql_num_rows($res)){
 while( $row=mysql_fetch_assoc($res)){
-echo ("<br/><img style='clear:both;z-index:-5; ' src='./images/".$row['image_url']."' /> <br/>".$row["title"]."<br/>");
+//echo ("<br/><img style='clear:both;z-index:-5; ' src='./images/".$row['image_url']."' /> <br/>".$row["title"]."<br/>");
+//
 
 }
-}}
+
+}
+
+}
 
 
 

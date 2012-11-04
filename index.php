@@ -110,19 +110,18 @@ function fn3(arg) {
 <div id="bottom">
 <div id="menu">
 <b>Genre</b><br><br>
-<a onmouseover="fn3('Adventure')" >Adventure</a><br><br>
-<a onmouseover="fn3('Comics')" >Comics</a><br><br>
-<a onmouseover="fn3('Science')" >Science&Technology</a> <br><br>
-<a onmouseover="fn3('Sci-Fi')" >Sci-Fi</a><br><br>
-<a onmouseover="fn3('Novel')" >Novel</a><br><br>
-<a onmouseover="fn3('Short Story')" >Short Story</a><br><br>
-<a onmouseover="fn3('History')" >History</a><br><br>
-<a onmouseover="fn3('Autobiography')" >Autobiography</a><br/><br>
-<a onmouseover="fn3('Epic')" >Epic</a>
+<div id="menubar1"><a onclick="fn3('Adventure')" >Adventure</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Comics')" >Comics</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Science')" >Science</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Sci-Fi')" >Sci-Fi</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Novel')" >Novel</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Short Story')" >Short Story</a></div><br><br>
+<div id="menubar"><a onclick="fn3('History')" >History</a></div><br><br>
+<div id="menubar"><a onclick="fn3('Autobiography')" >Autobiography</a></div><br/><br>
+<div id="menubar"><a onclick="fn3('Epic')" >Epic</a></div>
 </div>
 <div id="content">
 Content goes here
-
 
 </div>
 <div id="loginfield">
